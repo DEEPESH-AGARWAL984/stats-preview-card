@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+  <link rel="import" href="https://fonts.google.com/specimen/Inter">
+  <link rel="import" href="https://fonts.google.com/specimen/Lexend+Deca">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      text-align: left;
+      font-family: cursive;
+      background-color: hsl(233, 47%, 7%);
+      color: hsl(0, 0%, 100%);
+    }
+
+    .container{
+      margin:50px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column{
+      background-color: hsl(244, 38%, 16%);
+      float: left;
+      width: 30%;
+      border-radius: 8px;
+      padding: 0;
+      height: 400px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    p{
+      color: hsla(0, 0%, 100%, 0.75);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    p:hover{
+      color: limegreen;
+      cursor:pointer;
+      transition: 0.5s ease;
+    }
+
+    #img-gradient{
+      position: relative;
+    }
+
+    #img-gradient::after{
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom-right-radius: 8px;
+      border-top-right-radius: 8px;
+      background: linear-gradient(hsla(277, 64%, 61%, 0.429), hsla(277, 64%, 61%, 0.462));
+    }
+
+    .attribution {
+      font-size: 15px;
+      text-align: center;
+      margin: 50px;
+      font-family: cursive;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    a:hover{
+      color:limegreen ;
+      transition: 0.5s ease;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Heading and paragraph -->
+  <div class="container">
+    <div class="column" style="border-bottom-right-radius: 0; border-top-right-radius: 0; ">
+      <h2 style="margin: 50px;">
+        Get <span style="color: hsl(277, 64%, 61%);">insights</span> that help your business grow.
+      </h2>
+
+      <p style="color:hsla(0, 0%, 100%, 0.75); font-size: 15px; margin: 50px;">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.
+      </p>
+
+      <!-- Stats  -->
+      <div class="container" style="margin: 50px; ">
+        <div class="column" style="border: 0; height: 0;">
+          <h3 style="font-weight: 700;">10k+</h3>
+          <p style="letter-spacing: 0.08em;">COMPANIES</p>
+        </div>
+  
+          <div class="column" style="border: 0; height: 0; ">
+            <h3 style="font-weight: 700;">314</h3>
+            <p style="letter-spacing: 0.08em;">TEMPLATES</p>
+          </div>
+  
+          <div class="column" style="border: 0; height: 0;">
+            <h3 style="font-weight: 700;">12M+</h3>
+            <p style="letter-spacing: 0.08em;">QUERIES</p>
+          </div>
+        </div>
+    </div>
+    
+
+    <!-- Background Image In Column -->
+    <div class="column" id="img-gradient">
+      <img src="https://github.com/DEEPESH-AGARWAL984/stats-preview-card/blob/main/image-header-desktop.jpg" alt="Side-Image" width="100%" height="400px"
+        style="border-top-right-radius: 8px; border-bottom-right-radius: 8px;">
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/DEEPESH-AGARWAL984/stats-preview-card" target="_blank">Deepesh Agarwal - (INDIA)</a>.
+  </div>
+</body>
+
+</html>
